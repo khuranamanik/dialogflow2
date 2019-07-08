@@ -14,3 +14,6 @@ npm install
 
 npm install cors
 
+Run the backend code by: node app.js
+
+and then simply open the index.file in the frontend folder to chat. 
