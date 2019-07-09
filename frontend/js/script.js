@@ -11,7 +11,7 @@ let colors = ['black','darkgreen','red','darkblue'];
 
 //const cors = require('cors');
 //let gatewayUrl = "https://aqueous-springs-50974.herokuapp.com/"
-const gatewayUrl = "http://localhost:3000/";
+const gatewayUrl = "http://localhost:3000/detectintent";
 let query;
 // When user hit send the message following function executes. 
 const userAction = async () => {
