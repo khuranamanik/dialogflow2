@@ -1,9 +1,8 @@
 const express = require('express')
 const router  = express.Router()
-const cors = require('cors')
 const credentials = require('../credentials.js')
 
-async function runSample (req,res) {
+async function detecttheIntent (req,res) {
 const dialogflow = require('dialogflow');
 const uuid = require('uuid');
 let text = req.body.text; 
@@ -44,5 +43,5 @@ res.send(respData);
 }
 
 module.exports = {
-    runSample: runSample
+  detecttheIntent: detecttheIntent
   };

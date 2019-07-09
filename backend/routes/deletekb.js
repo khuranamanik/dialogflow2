@@ -1,6 +1,6 @@
 const express = require('express')
 const router  = express.Router()
-const cors = require('cors')
+//const cors = require('cors')
 const credentials = require('../credentials.js')
 //DELETES ONLY THOSE KNOWLEDGE BASES THAT DO NOT HAVE A DOCUMENT
 //SHOWS ERROR: THE KNOWLEDGE BASE HAS A DOCUMENT IN IT. IF YOU STILL WANT TO, AND THE TERMINATES

@@ -1,6 +1,6 @@
 const express = require('express')
 const router  = express.Router()
-const cors = require('cors')
+//const cors = require('cors')
 const credentials = require('../credentials.js')
 async function listKnowledgeBases(req,res) {
     // [START dialogflow_list_knowledge_base]
