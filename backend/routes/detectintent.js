@@ -6,10 +6,11 @@ async function detecttheIntent (req,res) {
 const dialogflow = require('dialogflow');
 const uuid = require('uuid');
 let text = req.body.text; 
-projectId = credentials.projectId
+let projectId = credentials.projectId
 // A unique identifier for the given session
 const sessionId = uuid.v4();
 // Create a new session
+//console.log("my credentailsssss are",credentials);
 const sessionClient = new dialogflow.SessionsClient(credentials.config);
 const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 // The text query request.

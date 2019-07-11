@@ -23,12 +23,12 @@ async function createDocument(req,res)
   //   client_email: email
   // }}
     // Instantiate a DialogFlow Documents client.
-     const client = new dialogflow.DocumentsClient(config);
+     const client = new dialogflow.DocumentsClient(credentials.config);
      projectId = credentials.projectId
-     const knowledgeBaseFullName = 'projects/still-tensor-244105/knowledgeBases/MzI4MzYzODY5OTc5NDg5MDc1Mg';
+     const knowledgeBaseFullName = 'projects/still-tensor-244105/knowledgeBases/NzE1NzY4NDM1NzM3OTkxNTc3Ng';
      //req.body.knowledgeBaseFullName
      //'projects/still-tensor-244105/knowledgeBases/myKnowledgeBase'; 
-     const documentPath = 'https://cloud.google.com/storage/docs/faq'
+     const documentPath = '/home/manik/Documents/nodejsfiles/appfinal/git-integrate/backend/doc1.csv'
      //req.body.documentPath
      //'https://policies.google.com/faq?hl=en-US';
      //'https://dialogflow.com/docs/knowledge-connectors';
@@ -36,7 +36,7 @@ async function createDocument(req,res)
      //req.body.documentName
      const knowledgeTypes = 'FAQ';
      //req.body.knowledgeTypes
-     const mimeType = 'text/html'
+     const mimeType = 'text/csv'
      //req.body.mimeType  
      
      const contentUri = 'https://cloud.google.com/storage/docs/faq'

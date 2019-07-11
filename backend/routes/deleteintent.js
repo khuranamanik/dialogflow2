@@ -7,7 +7,7 @@ async function deleteIntent(req,res) {
   const dialogflow = require('dialogflow');
   projectId = credentials.projectId,
   intentId = req.body.intentid
-  //console.log("my credentailsssss are",credentials);
+  console.log("my credentailsssss are",credentials);
   // Instantiates clients
   const intentsClient = new dialogflow.IntentsClient(credentials.config);
   const intentPath = intentsClient.intentPath(projectId, intentId);

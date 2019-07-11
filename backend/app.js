@@ -3,6 +3,7 @@ const router = express.Router();
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const mysql = require('mysql');
 
 const detectintent = require('./routes/detectintent.js')
 const createintent = require('./routes/createintent.js')
@@ -11,8 +12,12 @@ const createkb = require('./routes/createkb.js')
 const listkb = require('./routes/listkb.js')
 const deletekb = require('./routes/deletekb.js')
 const createdoc = require('./routes/createdoc.js')
+const deletedoc = require('./routes/deletedoc.js')
 const createentity = require('./routes/createentity.js')
 const createentitytype = require('./routes/createentitytype.js')
+const createcontext = require('./routes/createcontext.js')
+const deletecontext = require('./routes/deletecontext.js')
+const listcontext = require('./routes/listcontext.js')
 
 router.use(bodyParser());
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -30,6 +35,10 @@ router.post('/deleteknowledgebase', cors(corsOptionsDelegate), deletekb.deleteKn
 router.post('/createentity', cors(corsOptionsDelegate), createentity.createEntity);
 router.post('/createentitytype', cors(corsOptionsDelegate), createentitytype.createEntityType);
 router.post('/createdocument',urlencodedParser, cors(corsOptionsDelegate), createdoc.createDocument);
+router.post('/deletedocument', cors(corsOptionsDelegate),deletedoc.deleteDocument);
+router.post('/createcontext', cors(corsOptionsDelegate),createcontext.createContext);
+router.post('/deletecontext', cors(corsOptionsDelegate),deletecontext.deleteContext);
+router.post('/listcontext', cors(corsOptionsDelegate),listcontext.listContexts);
 
 router.use(function(req,res,next)
 {
